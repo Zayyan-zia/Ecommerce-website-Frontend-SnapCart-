@@ -77,7 +77,7 @@ function Contactus() {
         <textarea data-gsap  name="message" rows="5" onChange={contactInput} placeholder="Describe your issue..." className={styles.textarea} value={contact.message||''}></textarea>
         <span className={styles.textwords} style={{color:wordcount===200?'red':'black',display:wordcount===0?'none':'flex'}}>Wordcount: {wordcount}/200</span>
         </div>
-        <button data-gsap disabled={!contact.name|| !contact.email || !contact.phoneno || !contact.subject || !contact.message } type="submit" onClick={()=>navigate('/')} className={styles.button}>Submit</button>
+        <button data-gsap disabled={!contact.name|| !contact.email || !contact.phone || !contact.subject || !contact.message } type="submit" onClick={()=>navigate('/')} className={styles.button}>Submit</button>
       </form>
     </div>
   <div className={styles.contactinfo}>
