@@ -294,6 +294,9 @@ const Addtocartbtn=(productid,productname)=>{
           'Content-Type':'multipart/form-data'
         }
       })
+      .then((res)=>{
+        setloader('');
+      })
 
       setcheckoutinfo({
         checkoutemail:'',
