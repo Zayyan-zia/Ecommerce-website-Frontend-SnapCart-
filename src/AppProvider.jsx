@@ -8,7 +8,7 @@ import Signupsuccess from "./signupsuccessmsg";
 import Alert from "./contactsuccessmsg";
 function AppProvider({children}){
 
-const [quantity, setQuantity] = useState(1); // quantity for products
+const [quantity, setQuantity] = useState(0); // quantity for products
 
 const [show,setshow]=useState(true); // showing password.
 
@@ -236,6 +236,7 @@ const Addtocartbtn=(productid,productname)=>{
 
    const handleLess = () => {
     if (quantity > 1) setQuantity(quantity - 1);
+    else setQuantity(0);
   };
 
   const handleUpgrade = (qty) => {
